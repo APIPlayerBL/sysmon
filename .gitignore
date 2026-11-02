@@ -1,0 +1,29 @@
+# Rust / Tauri
+/src-tauri/target/
+/src-tauri/gen/
+/src-tauri/.cargo/
+
+# Node
+node_modules/
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+
+# Local build artifacts
+*.msi
+*.nsis
+*.exe
+!src-tauri/target/release/aida67.exe
+
+# Test/temp files
+cdp_*.py
+*.png
+# Temporary artifacts
+err.txt
+overlap_scan.json
+*.sed
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<title>AIDA67</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">AIDA67</div>
+      <nav class="tree">
+        <button class="tree-item active" data-view="computer">Компьютер</button>
+        <button class="tree-item child" data-view="cpu">CPU</button>
+        <button class="tree-item child" data-view="memory">Память</button>
+        <button class="tree-item child" data-view="board">Материнская плата / BIOS</button>
+        <button class="tree-item child" data-view="display">Дисплей / GPU</button>
+        <button class="tree-item child" data-view="storage">Хранилище</button>
+        <button class="tree-item child" data-view="network">Сеть</button>
+        <button class="tree-item child" data-view="devices">Устройства</button>
+        <button class="tree-item child" data-view="sensors">Датчики</button>
+        <button class="tree-item" data-view="software">ПО / безопасность</button>
+        <button class="tree-item" data-view="benchmark">Бенчмарки / стресс</button>
+        <button class="tree-item" data-view="report">Отчёт / экспорт</button>
+      </nav>
+      <div class="sidebar-footer">Independent build · no AIDA64 code</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1 id="view-title">Компьютер</h1>
+        <div class="toolbar">
+          <button id="btn-refresh">Обновить</button>
+          <label><input type="checkbox" id="auto-refresh"> авто 30с</label>
+          <span id="status"></span>
+        </div>
+      </header>
+
+      <section id="view-computer" class="view active"></section>
+      <section id="view-cpu" class="view"></section>
+      <section id="view-memory" class="view"></section>
+      <section id="view-board" class="view"></section>
+      <section id="view-display" class="view"></section>
+      <section id="view-storage" class="view"></section>
+      <section id="view-network" class="view"></section>
+      <section id="view-devices" class="view"></section>
+      <section id="view-sensors" class="view"></section>
+      <section id="view-software" class="view"></section>
+
+      <section id="view-benchmark" class="view"></section>
+
+      <section id="view-report" class="view">
+        <div class="panel">
+          <div class="toolbar">
+            <button id="btn-genreport">Сформировать</button>
+            <select id="export-format">
+              <option value="json">JSON</option>
+              <option value="csv">CSV</option>
+              <option value="html">HTML</option>
+            </select>
+            <input id="export-path" placeholder="C:\\out\\report" size="36">
+            <button id="btn-export">Экспортировать</button>
+            <span id="export-status"></span>
+          </div>
+          <h3>Оповещения</h3>
+          <div id="alerts" class="alerts"></div>
+          <h3>Отчёт</h3>
+          <textarea id="report-text" rows="18"></textarea>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

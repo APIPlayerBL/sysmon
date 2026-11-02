@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "AIDA67",
+  "version": "0.1.0",
+  "identifier": "com.aida67.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "beforeBuildCommand": "",
+    "beforeDevCommand": ""
+  },
+  "app": { "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "AIDA67 - System Information",
+        "width": 1100,
+        "height": 760,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "msi",
+      "nsis"
+    ],
+    "icon": []
+  }
+}
+
