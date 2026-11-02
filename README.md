@@ -39,6 +39,9 @@ cargo build --release
 ```
 Готовый бинарник: `src-tauri/target/release/aida67.exe`.
 
+## Установщик
+Самораспаковывающийся `AIDA67-Setup.exe` собирается из `installer/installer.cs` и встроенного `aida67.exe`: он распаковывает приложение в `%LOCALAPPDATA%\Programs\AIDA67`, создаёт ярлык на рабочем столе и запускает его.
+
 ## Проверки
 ```powershell
 cd src-tauri
