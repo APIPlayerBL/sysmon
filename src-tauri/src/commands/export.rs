@@ -66,7 +66,8 @@ mod tests {
     }
     #[test]
     fn rejects_bad_extension() {
-        let r = export_report_sync("C:\\tmp\\note.exe".to_string(), "x".to_string());
+        let path = std::env::temp_dir().join("sysmon_test_export.exe");
+        let r = export_report_sync(path.to_string_lossy().to_string(), "x".to_string());
         assert!(r.is_err());
     }
     #[test]

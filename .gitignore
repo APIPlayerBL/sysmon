@@ -13,11 +13,10 @@ node_modules/
 Thumbs.db
 Desktop.ini
 
-# Local build artifacts
+# Local build artifacts (never commit generated binaries: they embed machine-specific paths)
 *.msi
 *.nsis
 *.exe
-!src-tauri/target/release/aida67.exe
 
 # Test/temp files
 cdp_*.py
